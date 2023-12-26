@@ -1,30 +1,22 @@
-import { Button } from '@mui/material';
-import React, { useState } from 'react'
-import CreatePerson from './CreatePerson';
+// import { Button } from '@mui/material';
+import React from 'react'
+// import CreatePerson from './CreatePerson';
 
-function PersonList() {
+const PersonList = ({persons})=> {
 
-    const [createPerson, setCreatePerson]= useState(false);
-    
-    const handleCreatePerson = () =>{
-        setCreatePerson(true)
-    }
 
-  return (
     <div>
-        <div className="container">
-            {
-                createPerson ? <CreatePerson/>
-                :(
-                    <Button 
-                        onClick={handleCreatePerson}
-                        
-                        > Create</Button>
-                )
-            }
-        </div>
+        <ol>
+        {
+            persons.map((person, index)=>(
+                <li key={index}>
+                   <b> {person.name}</b> , -Category: {person.category}, Status: {person.status}
+                </li>
+            ))
+        }
+        </ol>
     </div>
-  )
+  
 }
 
 export default PersonList

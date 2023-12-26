@@ -1,30 +1,64 @@
-import React from 'react'
+import { Button } from '@mui/material';
+import React, { useState } from 'react';
 
-function CreatePerson() {
+const CreatePerson =({addPerson})=> {
+
+  const [name, setName]= useState("");
+  const [category, setCategory]= useState("");
+  const [status, setStatus]= useState("");
+  
+
+  const handleSubmit = (e)=>{
+
+     e.preventDefault();
+     addPerson({name, category, status});
+     setName('');
+     setCategory('')
+     setStatus('');
+    }
+
 
 
   return (
-    <div className='createPerson'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="fullname">
+          <label >
             <h2>Full Name</h2>
-            <input  
+              <input  
                 type="text" 
-                // value={fullname}
+                value={name}
                 placeholder='Full Name'
-                
+                onChange={(e)=>setName(e.target.value)}
                 />
-                <h2>Category</h2>
-            <input  
-                type="text" 
-                // value={fullname}
-                placeholder='Full Name'
-                
-                />
+          </label>
+          <br/>
+          <label >
+            <h2>Category</h2>
+            <select value={category} onChange={(e)=>setCategory(e.target.value)}>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+              <option value="children">Children -18</option>
+            </select>
+          </label>
+          <br/>
+          <label>
+            <h2>Status</h2>
+            <select value={status} onChange={(e)=>setStatus(e.target.value)}>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+            </select>  
+          </label> 
+          
+
+            <Button 
+              type="submit"
+            >Save</Button>
         </div>
       </form>
-    </div>
+    
   )
 }
+
 
 export default CreatePerson
