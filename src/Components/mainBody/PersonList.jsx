@@ -1,6 +1,4 @@
-// import { Button } from '@mui/material';
 import React from 'react'
-// import CreatePerson from './CreatePerson';
 
 const PersonList = ({persons})=> {
 
