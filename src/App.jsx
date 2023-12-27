@@ -13,7 +13,7 @@ function App() {
 
   const createPerson = (person) =>{
     setPersons([...persons, person]);
-    setShowForm(showForm);
+    setShowForm(false);
 }
   const toggleForm=()=>{
     setShowForm(!showForm)
