@@ -21,7 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar 
+      // menCount={menCount} womenCount={womenCount} childrenCount={childrenCount}
+      />
 
       <div className="container">
             <Button onClick={toggleForm}>Add Person</Button>

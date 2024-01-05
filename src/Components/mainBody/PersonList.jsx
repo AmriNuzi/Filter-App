@@ -1,19 +1,32 @@
 import React from 'react'
+import "./personList.scss";
 
 const PersonList = ({persons})=> {
     const reversedPersons= [...persons].reverse();
 
     return(
-    <div>
-        <ol>
+    <div className='personList'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody> 
         {
             reversedPersons.map((person, index)=>(
-                <p key={index}>
-                 {reversedPersons.length- index+"."}  <b> {person.name}</b> , -Category: {person.category}, Status: {person.status}
-                </p>
-            ))
-        }
-        </ol>
+                <tr key={index}>
+                    <td>{reversedPersons.length- index+". "}
+                    <b> {person.name}</b> </td>
+                    <td>{person.category}</td>  
+                    <td>{person.status}</td>
+                </tr>
+                ))
+            }
+            </tbody>
+        </table>
     </div>
     )
 }

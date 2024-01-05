@@ -1,0 +1,53 @@
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-right: 150px;
+    
+    
+    .fullname{
+        padding: 5px;
+        width: 400px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+        .name{
+            input{
+                width: 100%;
+            }
+        }
+
+        .category-status{
+            display: flex;
+            // flex-direction: row;
+            justify-content: space-between;
+
+            .category{
+                select{
+                    width: 200px;
+                    font-size: 15px;
+                }
+            }
+            .status{
+                // display: flex;
+                select{
+                    width: 150px;
+                    font-size: 15px;
+                }
+            }
+            
+        }
+        button{
+            background-color: rgba(113, 207, 72, 1);
+            color: white;
+            width: 80px;
+            height: 25px;
+            font-size: 16px;
+            justify-content: end;
+            margin-left: 80%;
+            margin-top: 30px;
+            border-radius: 7px;
+            border: 0;
+        }
+    }
+
+}

@@ -1,0 +1,44 @@
+.personList{
+    // width: 100%;
+    border-collapse: collapse;
+    table{
+        margin: 30px 0px 0px 400px;
+        // padding: 20px;
+        thead{
+            // padding: 20px;
+        }
+        tr {
+
+            margin: 100px;
+            
+         th  {
+            padding-left: 170px;
+            padding-top: 10px;
+            margin: 100px;
+            border-bottom: 1px solid #ddd;
+            // align-items: center;
+            // text-align: center;
+        }
+         th {
+            background-color: #f7f6f6;
+            border-radius: 5px;
+            padding-right: 80px;
+            text-align: center;
+         }
+        } 
+        tbody, tr{
+            // padding-top: 10px;
+            // align-items: center;
+            
+            td{
+                padding-top: 10px;
+                // display: flex;
+                align-items: center;
+                text-align: center;
+                padding-left: 95px;
+                border-bottom: 1px solid #f2f1f1;
+
+            }
+        }
+    }
+}
